@@ -1,0 +1,613 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Simplex</title>
+	<link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+	<header>
+		<div class="container-hero">
+			<div class="container hero">
+				<div class="customer-support">
+					<i class="fa-solid fa-headset"></i>
+					<div class="content-customer-support">
+						<span class="text">Soporte al cliente</span>
+						<span class="number">123-456-7890</span>
+					</div>
+				</div>
+				<div class="container-logo">
+					<h1 class="logo"><a href="/">Simplex</a></h1>
+				</div>
+				<div class="container-user">
+					<i class="fa-solid fa-user"></i>
+
+
+					<!-- Botón de cerrar sesión -->
+					<form asp-action="Logout" method="post" style="display: inline;">
+						<button type="submit" class="logout-btn">Cerrar Sesión</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main-content">
+		<section class="banner">
+			<div id="productCarousel" class="carousel slide" data-bs-ride="carousel" style="background-image: url('ruta_de_imagen_fondo.jpg'); background-size: cover; background-position: center;">
+				<div class="carousel-inner">
+					<!-- Primer producto: Agua Mineral -->
+					<div class="carousel-item active">
+						<div class="content-banner text-center">
+                            
+							<p>Agua Mineral S/GAS 1600cc</p>
+							<button id="openModalButton1" class="btn btn-primary btn-buy">Comprar ahora</button>
+						</div>
+					</div>
+
+					<!-- Segundo producto: Carne Vacuno Posta Negra, 1,6 kg -->
+					<div class="carousel-item">
+						<div class="content-banner text-center">
+							
+							<p>Carne Vacuno Posta Negra, 1,6 kg</p>
+							<button id="openModalButton2" class="btn btn-primary btn-buy">Comprar ahora</button>
+						</div>
+					</div>
+
+					<!-- Tercer producto: Whisky Johnnie Walker Red Label Blended 40° Botella, 750 ml -->
+					<div class="carousel-item">
+						<div class="content-banner text-center">
+							
+							<p>Whisky Johnnie Walker Red Label Blended 40° Botella, 750 ml</p>
+							<button id="openModalButton3" class="btn btn-primary btn-buy">Comprar ahora</button>
+						</div>
+					</div>
+
+					<!-- Cuarto producto: Detergente Líquido Lirios Y Rosas, 3 L -->
+					<div class="carousel-item">
+						<div class="content-banner text-center">
+						
+							<p>Detergente Líquido Lirios Y Rosas, 3 L</p>
+							<button id="openModalButton4" class="btn btn-primary btn-buy">Comprar ahora</button>
+						</div>
+					</div>
+				</div>
+				<!-- Controles del carrusel -->
+				<button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</section>
+	</main>
+
+
+	<!-- Modales para cada producto -->
+	<!-- Modal para Agua Mineral -->
+	<div id="productModal1" class="modal">
+		<div class="modal-content">
+			<span class="close-btn" id="closeModal1">&times;</span>
+			<h2>Agua Mineral S/GAS 1600cc</h2>
+		
+			<a href="https://www.lider.cl/supermercado/product/sku/4387/cachantun-agua-mineral-natural-sin-gas-16-l?utm_source=preciosganga.cl&utm_medium=preciosganga&utm_campaign=preciosganga" class="product-link" target="_blank">Lider</a>
+			<h2> Precio: $970</h2>
+			<a href="https://www.unimarc.cl/product/agua-cachantun-s-gas-no-ret-1-6-lt?utm_source=preciosganga.cl&utm_medium=preciosganga&utm_campaign=preciosganga" class="product-link" target="_blank">Unimarc</a>
+			<h2> Precio: $980</h2>
+			<a href="https://www.jumbo.cl/agua-mineral-sin-gas-cachantun-16-l-botella-desechable/p?utm_source=preciosganga.cl&utm_medium=preciosganga&utm_campaign=preciosganga" class="product-link" target="_blank">Jumbo</a>
+			<h2> Precio: $1.090</h2>
+		</div>
+	</div>
+
+	<!-- Modal para Carne Vacuno Posta Negra, 1,6 kg -->
+	<div id="productModal2" class="modal">
+		<div class="modal-content">
+			<span class="close-btn" id="closeModal2">&times;</span>
+			<h2>Carne Vacuno Posta Negra, 1,6 kg</h2>
+
+			<a href="https://www.lider.cl/supermercado/product/sku/4493161/al-vacio-carne-vacuno-posta-negra-16-kg" class="product-link" target="_blank">Lider</a>
+			<h2> Precio: $11.024</h2>
+			<a href="https://www.unimarc.cl/product/posta-negra-vacuno-nacional-vac-o-kg?srsltid=AfmBOoo-oXif3CHQtNBkLOL83HBZGHNzdBE_ReHyDyGxXBCYKGP9CJ99" class="product-link" target="_blank">Unimarc</a>
+			<h2> Precio: $18.224</h2>
+			<a href="https://www.jumbo.cl/posta-negra-cat-v/p?srsltid=AfmBOophW1PP-iLefyx2OW9fCoEl4dvGktbI2Fqf_0AeE7lxStDMoRIv" class="product-link" target="_blank">Jumbo</a>
+			<h2> Precio: $17.584</h2>
+		</div>
+	</div>
+
+	<!-- Modal para Whisky Johnnie Walker Red Label Blended 40° Botella, 750 ml-->
+	<div id="productModal3" class="modal">
+		<div class="modal-content">
+			<span class="close-btn" id="closeModal3">&times;</span>
+			<h2>Whisky Johnnie Walker Red Label Blended 40° Botella, 750 ml</h2>
+
+			<a href="https://www.lider.cl/supermercado/product/sku/1401/johnnie-walker-whisky-johnnie-walker-red-label-blended-40-botella-750-ml" class="product-link" target="_blank">Lider</a>
+			<h2> Precio: $10.390</h2>
+			<a href="https://www.unimarc.cl/product/whisky-johnnie-walker-et-roja-750-ml" class="product-link" target="_blank">Unimarc</a>
+			<h2> Precio: $14.890</h2>
+			<a href="https://www.jumbo.cl/whisky-johnnie-walker-750-cc-40-etiqueta-roja-importado/p" class="product-link" target="_blank">Jumbo</a>
+			<h2> Precio: $15.290</h2>
+		</div>
+	</div>
+
+	<!-- Modal para Leche Descremada -->
+	<div id="productModal4" class="modal">
+		<div class="modal-content">
+			<span class="close-btn" id="closeModal4">&times;</span>
+			<h2>Detergente Líquido Lirios Y Rosas, 3 L</h2>
+
+			<a href="https://www.lider.cl/supermercado/product/sku/723165/rinso-detergente-liquido-lirios-y-rosas-3-l" class="product-link" target="_blank">Lider</a>
+			<h2> Precio: $7.550</h2>
+			<a href="" class="product-link" target="_blank">Unimarc</a>
+			<h2> Precio: NO DISPONIBLE</h2>
+			<a href="https://www.jumbo.cl/www-jumbo-clrinso-detergenteliquido-matic-liriosyrosas-3l/p" class="product-link" target="_blank">Jumbo</a>
+			<h2> Precio: $8.999</h2>
+		</div>
+	</div>
+
+	<!-- Script para mostrar y ocultar los modales -->
+	<script>
+		// Función para abrir y cerrar los modales de cada producto
+		function setupModal(openButtonId, modalId, closeButtonId) {
+			document.getElementById(openButtonId).onclick = function () {
+				document.getElementById(modalId).style.display = 'block';
+			};
+			document.getElementById(closeButtonId).onclick = function () {
+				document.getElementById(modalId).style.display = 'none';
+			};
+			window.onclick = function (event) {
+				if (event.target == document.getElementById(modalId)) {
+					document.getElementById(modalId).style.display = 'none';
+				}
+			};
+		}
+
+		// Configurar los modales
+		setupModal('openModalButton1', 'productModal1', 'closeModal1');
+		setupModal('openModalButton2', 'productModal2', 'closeModal2');
+		setupModal('openModalButton3', 'productModal3', 'closeModal3');
+		setupModal('openModalButton4', 'productModal4', 'closeModal4');
+	</script>
+		<main class="main-content">
+			<h1 class="heading-1">Anuncios</h1>
+			<section class="container container-features">
+				<div class="card-feature">
+
+					<i class="fa-solid fa-plane-up"></i>
+					<div class="feature-content">
+	
+						<span>SORTEO PARA COLABORADORES</span>
+						<p2>Si eres suscriptor de mas de 5 meses gana un viaje por TODO chile
+						</p2>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-wallet"></i>
+					<div class="feature-content">
+						<span>Planes de suscripcion</span>
+						<p2>Adecua tu plan a tus necesidades</p2>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-gift"></i>
+					<div class="feature-content">
+						<span>Tarjeta regalo especial</span>
+						<p2>Suscripciones gratis por </p2>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-headset"></i>
+					<div class="feature-content">
+						<span>Servicio al cliente 24/7</span>
+						<p2>LLámenos 24/7 al 123-456-7890</p2>
+					</div>
+				</div>
+			</section>
+
+			<section class="container top-categories">
+				<h1 class="heading-1">Mejores Categorías</h1>
+				<div class="container-categories">
+					<div class="card-category category-moca">
+						<p>Supermercado</p>
+						<span>Ver más</span>
+					</div>
+					<div class="card-category category-expreso">
+						<p>Farmacia </p>
+						<span>Ver más</span>
+					</div>
+					<div class="card-category category-capuchino">
+						<p>Tecnología </p>
+						<span>Ver más</span>
+					</div>
+					<div class="card-category category-capuchino">
+						<p>Ropa, Vestuario Y Calzado </p>
+						<span>Ver más</span>
+					</div>
+					<div class="card-category category-capuchino">
+						<p>Mascotas</p>
+						<span>Ver más</span>
+					</div>
+					<div class="card-category category-capuchino">
+						<p>Libros </p>
+						<span>Ver más</span>
+			</section>
+
+			<section class="container top-productos">
+				<h1 class="heading-1">Mejores Ofertas </h1>
+
+				<div class="container-options">
+					<span class="active">Destacados</span>
+					<span>Más recientes</span>
+					<span>Mejores Vendidos</span>
+				</div>
+
+				<div class="container-products">
+					<!-- Producto 1 -->
+					<div class="card-product">
+						<div class="container-img">
+
+							<span class="discount">-13%</span>
+							<div class="button-group">
+								<a href="https://www.liquidos.cl/productos/22568/pisco-mistral-nobel-apple-750cc" target="_blank">
+									<span>
+										<i class="fa-solid fa-basket-shopping"></i> Comprar
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Pisco BOT NOBEL Apple</h3>
+							<div>
+								<h2>
+									liquidos.cl
+								</h2>
+							</div>
+							<p class="price">= $11.990 </p>
+						</div>
+					</div>
+					<!-- Producto 2 -->
+					<div class="card-product">
+						<div class="container-img">
+
+
+							<span class="discount">-22%</span>
+							<div class="button-group">
+								<a href="https://www.alvi.cl//product/ron-blanco-botella" target="_blank">
+									<span>
+										<i class="fa-solid fa-basket-shopping"></i> Comprar
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Ron BLANCO BOT 40G</h3>
+							<div>
+								<h2>
+									alvi.cl
+								</h2>
+							</div>
+							<p class="price">
+								=
+								$3.560
+							</p>
+								
+						</div>
+					</div>
+					<!-- producto 3 -->
+					<div class="card-product">
+						<div class="container-img">
+
+
+							<div class="button-group">
+								<a href="https://www.lider.cl/supermercado/product/sku/4059/bilz-bebida-sabor-frutal-3-l" target="_blank">
+									<span>
+										<i class="fa-solid fa-basket-shopping"></i> Comprar
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<h3>Bilz 3000cc</h3>
+							<div>
+								<h2>
+									Lider
+								</h2>
+							</div>
+							<p class="price">= 2x$4.290 </p>
+						</div>
+					</div>
+					<!-- Producto 4 -->
+					<div class="card-product">
+						<div class="container-img">
+
+							<div class="button-group">
+								<a href="https://www.lider.cl/supermercado/product/sku/806198/pepsi-bebida-original-botella-600-ml" target="_blank">
+									<span>
+										<i class="fa-solid fa-basket-shopping"></i> Comprar
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Pepsi 600cc</h3>
+							<div>
+								<h2>
+									Lider
+								</h2>
+							</div>
+							<p class="price">= 2x$1.790 </p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+			<section class="container specials">
+				<h1 class="heading-1">Ofertas Relampago</h1>
+
+				<div class="container-products">
+					<!-- Producto 1 -->
+					<div class="card-product">
+						<div class="container-img">
+
+							<span class="discount">-13%</span>
+							<div class="button-group">
+								<a href="https://www.lider.cl/supermercado/product/sku/4027/kem-bebida-pina-original-botella-3-l" target="_blank">
+									<span>
+										<i class="fa-solid fa-basket-shopping"></i> Comprar
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Bebida Piña Zero,3L</h3>
+							<div>
+								<h2>
+									Lider
+								</h2>
+							</div>
+							<p class="price">= 2x$4.290 </p>
+						</div>
+					</div>
+					<!-- Producto 2 -->
+					<div class="card-product">
+						<div class="container-img">
+
+							<span class="discount">-22%</span>
+							<div class="button-group">
+								<a href="https://www.lider.cl/supermercado/product/sku/4023/limon-soda-bebida-limon-botella-3-l" target="_blank">
+									<span>
+										<i class="fa-solid fa-basket-shopping"></i> Comprar
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Bebida Limon soda,3L</h3>
+							<div>
+								<h2>
+									Lider
+								</h2>
+							</div>
+							<p class="price">= 2x$4.290 </p>
+						</div>
+					</div>
+					<!--  -->
+					<div class="card-product">
+						<div class="container-img">
+							<span class="discount">-30%</span>
+							<div class="button-group">
+								<a href="https://www.lider.cl/supermercado/product/sku/842871/gatorade-bebida-isotonica-cool-blue-botella-750-cc" target="_blank">
+									<span>
+										<i class="fa-solid fa-basket-shopping"></i> Comprar
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<h3>Gatorade Cool Blue 750cc</h3>
+							<div>
+								<h2>
+									Lider
+								</h2>
+							</div>
+							<p class="price">= $1.350 </p>
+						</div>
+					</div>
+					<!--  -->
+					<div class="card-product">
+						<div class="container-img">
+							<div class="button-group">
+								<a href="https://www.lider.cl/supermercado/product/sku/997706/coors-cerveza-lager-original-5-pack-6-botella-355-ml" target="_blank">
+									<span>
+										<i class="fa-solid fa-basket-shopping"></i> Comprar
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Coors Original 6XPAC</h3>
+							<p class="price">Lider=$4.790 <span>$6.390</span></p>
+						</div>
+				</div>
+			</section>
+
+			<section class="container blogs">
+	</main>
+
+	<!-- Modal -->
+	<div id="productModal" class="modal">
+		<div class="modal-content">
+			<span class="close-btn" id="closeModal">&times;</span>
+			<h2>Agua Mineral S/GAS 1600cc</h2>
+			<a href="https://www.lider.cl/supermercado/product/sku/4387/cachantun-agua-mineral-natural-sin-gas-16-l?utm_source=preciosganga.cl&utm_medium=preciosganga&utm_campaign=preciosganga" class="product-link" target="_blank">Lider</a>
+				<h2> Precio: $970</h2>
+				<a href="https://tottus.falabella.com/tottus-cl/product/110615640/cachantun-agua-mineral-cachantun-sg-des-01018030/110615641?exp=tottus?utm_source=preciosganga.cl&utm_medium=preciosganga&utm_campaign=preciosganga" class="product-link" target="_blank">Tottus</a>
+				<h2> Precio: $990</h2>
+				<a href="https://www.unimarc.cl/product/agua-cachantun-s-gas-no-ret-1-6-lt?utm_source=preciosganga.cl&utm_medium=preciosganga&utm_campaign=preciosganga" class="product-link" target="_blank">Unimarc</a>
+				<h2> Precio: $980</h2>
+				<a href="https://www.jumbo.cl/agua-mineral-sin-gas-cachantun-16-l-botella-desechable/p?utm_source=preciosganga.cl&utm_medium=preciosganga&utm_campaign=preciosganga" class="product-link" target="_blank">Jumbo (de cuico)</a>
+				<h2> Precio: $1.090</h2>
+
+
+		</div>
+	</div>
+
+	<script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+	<script>
+		// Mostrar el modal al hacer clic en el botón
+		document.getElementById('openModalButton').onclick = function() {
+			document.getElementById('productModal').style.display = 'block';
+		};
+
+		// Cerrar el modal al hacer clic en la 'x'
+		document.getElementById('closeModal').onclick = function() {
+			document.getElementById('productModal').style.display = 'none';
+		};
+
+		// Cerrar el modal al hacer clic fuera de la ventana del modal
+		window.onclick = function(event) {
+			if (event.target == document.getElementById('productModal')) {
+				document.getElementById('productModal').style.display = 'none';
+			}
+		};
+	</script>
+</body>
+</html>
+<style>
+
+	/* Estilo para el modal */
+	.modal {
+		display: none;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgba(0, 0, 0, 0.5);
+		padding-top: 60px;
+	}
+
+
+
+	.modal-content {
+		background-color: #fefefe;
+		margin: 5% auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 80%;
+		max-width: 600px;
+		border-radius: 10px;
+		text-align: center;
+	}
+
+	.close-btn {
+		color: #aaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+		.close-btn:hover,
+		.close-btn:focus {
+			color: black;
+			text-decoration: none;
+		}
+
+	.product-link {
+		display: block;
+		margin-top: 15px;
+		text-decoration: none;
+		color: #007BFF;
+		font-size: 18px;
+	}
+
+	.logout-btn {
+		background-color: #ff4b4b;
+		color: #fff;
+		border: none;
+		padding: 10px 20px;
+		cursor: pointer;
+		border-radius: 5px;
+		font-size: 14px;
+		margin-left: 10px;
+	}
+
+	#openModalButton {
+		background-color: #007BFF;
+		color: #fff;
+		border: none;
+		padding: 10px 20px;
+		border-radius: 5px;
+		font-size: 16px;
+		cursor: pointer;
+		transition: background-color 0.3s;
+	}
+
+
+
+</style>

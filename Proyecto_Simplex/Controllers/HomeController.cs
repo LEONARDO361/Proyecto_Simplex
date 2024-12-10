@@ -18,6 +18,40 @@ namespace Proyecto_Simplex.Controllers
             return View();
         }
 
+        // Cambiado a "Supermercado" para consistencia
+        public IActionResult Supermercado()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(LoginModel model)
+        {
+            string validEmail = "simplex@gmail.com";
+            string validPassword = "simplex";
+
+            if (model.Email == validEmail && model.Password == validPassword)
+            {
+                return RedirectToAction("VistaPrincipal");
+            }
+            else
+            {
+                ViewBag.ErrorMessage = "Correo electrónico o contraseña incorrectos";
+                return View("Index");
+            }
+        }
+
+        public IActionResult VistaPrincipal()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Logout()
+        {
+            return RedirectToAction("Index");
+        }
+
         public IActionResult Privacy()
         {
             return View();

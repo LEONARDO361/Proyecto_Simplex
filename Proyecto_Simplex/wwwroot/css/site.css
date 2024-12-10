@@ -16,7 +16,6 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
-
 /* ********************************** */
 /*             UTILIDADES             */
 /* ********************************** */
@@ -30,7 +29,6 @@ html {
     font-weight: 500;
     font-size: 3rem;
 }
-
 /* ********************************** */
 /*               HEADER               */
 /* ********************************** */
@@ -86,8 +84,7 @@ html {
 
     .container-user .fa-user {
         font-size: 3rem;
-        color: 
-        padding-right: 2.5rem;
+        color: padding-right: 2.5rem;
         border-right: 1px solid #e2e2e2;
     }
 
@@ -101,7 +98,6 @@ html {
     display: flex;
     flex-direction: column;
 }
-
 /* ************* NAVBAR ************* */
 .container-navbar {
     background-color: var(--primary-color);
@@ -197,7 +193,6 @@ html {
     font-size: 2rem;
     color: #fff;
 }
-
 /* ********************************** */
 /*               BANNER               */
 /* ********************************** */
@@ -238,14 +233,12 @@ html {
         text-transform: uppercase;
         border-radius: 3rem;
     }
-
 /* ********************************** */
 /*            MAIN CONTENT            */
 /* ********************************** */
 .main-content {
     background-color: var(--background-color);
 }
-
 /* ********************************** */
 /*              FEATURES              */
 /* ********************************** */
@@ -287,11 +280,9 @@ html {
         color: #777;
         font-weight: 500;
     }
-
 /* ********************************** */
 /*             CATEGORIES             */
 /* ********************************** */
-
 .top-categories {
     display: flex;
     flex-direction: column;
@@ -363,7 +354,6 @@ html {
     .card-category span:hover {
         color: var(--primary-color);
     }
-
 /* ********************************** */
 /*            TOP PRODUCTS            */
 /* ********************************** */
@@ -400,7 +390,6 @@ html {
             background-color: var(--primary-color);
             color: #fff;
         }
-
 /* Products */
 .container-products {
     display: grid;
@@ -548,7 +537,6 @@ html {
         color: #777;
         margin-left: 0.5rem;
     }
-
 /* ********************************** */
 /*               GALLERY              */
 /* ********************************** */
@@ -570,7 +558,6 @@ html {
     grid-column: 2/4;
     grid-row: 1/3;
 }
-
 /* ********************************** */
 /*              SPECIALS              */
 /* ********************************** */
@@ -580,7 +567,6 @@ html {
     gap: 2rem;
     margin-bottom: 3rem;
 }
-
 /* ********************************** */
 /*                BLOGS               */
 /* ********************************** */
@@ -684,11 +670,9 @@ html {
     .btn-read-more:hover {
         background-color: var(--dark-color);
     }
-
 /* ********************************** */
 /*               FOOTER               */
 /* ********************************** */
-
 .footer {
     background-color: var(--primary-color);
 }
@@ -844,7 +828,6 @@ html {
         font-weight: 400;
         font-size: 1.6rem;
     }
-
 /* ********************************** */
 /*       MEDIA QUERIES -- 768px       */
 /* ********************************** */
@@ -947,7 +930,6 @@ html {
     }
 }
 
-
 @media (max-width: 468px) {
     html {
         font-size: 42.5%;
@@ -1046,4 +1028,471 @@ html {
     .content p {
         font-size: 1.6rem;
     }
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* Header */
+.container-hero {
+    background-color: #f8f8f8;
+    padding: 10px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.container-user, .customer-support {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .customer-support i, .container-user i {
+        font-size: 24px;
+    }
+
+/* Navbar */
+.container-navbar {
+    background-color: #333;
+    padding: 10px;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .navbar ul.menu {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+    }
+
+        .navbar ul.menu li a {
+            color: white;
+            text-decoration: none;
+        }
+
+.search-form input[type="search"] {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Banner */
+.banner {
+    background-color: #ddd;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.content-banner p {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Estilos del login modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.modal-content button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    .modal-content button:hover {
+        background-color: #0056b3;
+    }
+
+/* Botón de login */
+.login-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+    .login-button:hover {
+        background-color: #0056b3;
+    }
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+    .footer .container-footer {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+.menu-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-footer p.title-footer {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menu-footer ul li {
+    margin-bottom: 5px;
+}
+
+    .menu-footer ul li a {
+        color: #ccc;
+        text-decoration: none;
+    }
+
+        .menu-footer ul li a:hover {
+            color: white;
+        }
+
+.social-icons span {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+    .social-icons span i {
+        font-size: 20px;
+    }
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url(../images/bg4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedor__todo {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.caja__trasera {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 128, 255, 0.5);
+}
+
+    .caja__trasera div {
+        margin: 100px 40px;
+        color: white;
+        transition: all 500ms;
+    }
+
+
+        .caja__trasera div p,
+        .caja__trasera button {
+            margin-top: 30px;
+        }
+
+        .caja__trasera div h3 {
+            font-weight: 400;
+            font-size: 26px;
+        }
+
+        .caja__trasera div p {
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+    .caja__trasera button {
+        padding: 10px 40px;
+        border: 2px solid #fff;
+        font-size: 14px;
+        background: transparent;
+        font-weight: 600;
+        cursor: pointer;
+        color: white;
+        outline: none;
+        transition: all 300ms;
+    }
+
+        .caja__trasera button:hover {
+            background: #fff;
+            color: #46A2FD;
+        }
+
+/*Formularios*/
+
+.contenedor__login-register {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+    /*La transicion va despues del codigo JS*/
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+    .contenedor__login-register form {
+        width: 100%;
+        padding: 80px 20px;
+        background: white;
+        position: absolute;
+        border-radius: 20px;
+    }
+
+        .contenedor__login-register form h2 {
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #46A2FD;
+        }
+
+        .contenedor__login-register form input {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px;
+            border: none;
+            background: #F2F2F2;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .contenedor__login-register form button {
+            padding: 10px 40px;
+            margin-top: 40px;
+            border: none;
+            font-size: 14px;
+            background: #46A2FD;
+            font-weight: 600;
+            cursor: pointer;
+            color: white;
+            outline: none;
+        }
+
+
+
+
+.formulario__login {
+    opacity: 1;
+    display: block;
+}
+
+.formulario__register {
+    display: none;
+}
+/* Estilo para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .close-btn:hover,
+    .close-btn:focus {
+        color: black;
+        text-decoration: none;
+    }
+
+.product-link {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 18px;
+}
+
+.logout-btn {
+    background-color: #ff4b4b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+#openModalButton {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+@media screen and (max-width: 850px) {
+
+    main {
+        margin-top: 50px;
+    }
+
+    .caja__trasera {
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+        .caja__trasera div {
+            margin: 0px;
+            position: absolute;
+        }
+
+
+    /*Formularios*/
+
+    .contenedor__login-register {
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+        .contenedor__login-register form {
+            position: relative;
+        }
 }
